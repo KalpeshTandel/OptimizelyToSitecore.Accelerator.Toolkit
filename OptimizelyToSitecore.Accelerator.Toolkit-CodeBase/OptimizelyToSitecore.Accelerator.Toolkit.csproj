@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>disable</Nullable>
+	<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Version>1.0.0</Version>
+    <Authors>Kalpesh Tandel</Authors>
+    <Description>Optimizely to Sitecore Accelerator Scheduled Jobs</Description>
+    <OutputType>Library</OutputType>
+	<IsPackable>true</IsPackable>
+  </PropertyGroup>
+  
+  <ItemGroup>
+  <!-- Force the core framework to 12.4.0 as requested by NuGet -->
+	<PackageReference Include="EPiServer.Framework" Version="12.4.0" />
+  
+<!-- Bring your other core packages up to 12.4.0 to match -->
+	<PackageReference Include="EPiServer.CMS" Version="12.4.0" />
+	<PackageReference Include="EPiServer.CMS.UI" Version="12.4.0" />
+	<PackageReference Include="EPiServer.Hosting" Version="12.4.0" />
+  
+    <PackageReference Include="Wangkanai.Detection" Version="2.0.1" />
+	
+<!-- Keep your search package locked here -->
+  <PackageReference Include="EPiServer.Find.Cms" Version="14.2.4" />
+  </ItemGroup>
+  
+  </Project>
