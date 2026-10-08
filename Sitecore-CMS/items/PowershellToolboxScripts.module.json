@@ -1,0 +1,13 @@
+{
+  "namespace": "Foundation.ToolboxScripts",
+  "references": [],
+  "items": {
+    "includes": [
+      {
+        "name": "PowerShellToolboxScripts",
+        "path": "/sitecore/system/Modules/PowerShell/Script Library/Optimizely To Sitecore Accelerator Toolkit",
+        "allowedPushOperations": "CreateUpdateAndDelete"
+      }
+    ]
+  }
+}

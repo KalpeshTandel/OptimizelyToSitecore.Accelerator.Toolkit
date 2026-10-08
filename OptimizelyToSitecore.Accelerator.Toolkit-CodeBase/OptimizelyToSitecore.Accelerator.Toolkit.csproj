@@ -3,7 +3,7 @@
     <TargetFramework>net8.0</TargetFramework>
     <Nullable>disable</Nullable>
 	<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>1.0.0</Version>
+    <Version>8.10.26</Version>
     <Authors>Kalpesh Tandel</Authors>
     <Description>Optimizely to Sitecore Accelerator Scheduled Jobs</Description>
     <OutputType>Library</OutputType>
@@ -22,7 +22,7 @@
     <PackageReference Include="Wangkanai.Detection" Version="2.0.1" />
 	
 <!-- Keep your search package locked here -->
-  <PackageReference Include="EPiServer.Find.Cms" Version="14.2.4" />
+  <!-- <PackageReference Include="EPiServer.Find.Cms" Version="14.2.4" /> -->
   </ItemGroup>
   
   </Project>
