@@ -31,7 +31,8 @@ graph LR
 The toolkit consists of two halves: the **Optimizely Extraction Engine** and the **Sitecore Import Scripts**.
 
 ### A. Installing the Optimizely Extraction Engine
-The Optimizely export jobs are packaged as a standard `.nupkg` file (e.g., `OptimizelyToSitecore.Accelerator.Toolkit.8.10.26.nupkg`).
+The Optimizely export jobs are packaged as a standard `.nupkg` file (e.g., `OptimizelyToSitecore.Accelerator.Toolkit.8.10.26.nupkg`) located in the `Installers/` directory of this repository.
+- ⏬ **Download:** [OptimizelyToSitecore.Accelerator.Toolkit.8.10.26.nupkg](https://github.com/KalpeshTandel/OptimizelyToSitecore.Accelerator.Toolkit/tree/main/Installers)
 
 1. Place the provided `.nupkg` file in your local NuGet feed directory (e.g., `C:\LocalNuGet`).
 2. Open your Optimizely web project directory in Visual Studio.
@@ -46,6 +47,7 @@ The Optimizely export jobs are packaged as a standard `.nupkg` file (e.g., `Opti
 
 ### B. Installing the Sitecore Import Scripts
 The Sitecore ingestion tools are packaged as a standard Sitecore installation ZIP, located in the `Installers/` directory of this repository.
+- ⏬ **Download:** [Optimizely-To-Sitecore-Accelerator-Toolkit-1.0.zip](https://github.com/KalpeshTandel/OptimizelyToSitecore.Accelerator.Toolkit/tree/main/Installers)
 
 **For Sitecore XP/XM (Pre-10.5):**
 1. Log into your Sitecore Desktop (or Launchpad).
@@ -54,8 +56,10 @@ The Sitecore ingestion tools are packaged as a standard Sitecore installation ZI
 
 **For Sitecore 10.5+ / XM Cloud (via SCS):**
 Sitecore 10.5 onwards deprecates the traditional package installer. You can use the Sitecore Content Serialization (SCS) Item Package instead.
-1. Locate `Optimizely-To-Sitecore-Accelerator-Toolkit-1.0.itempackage` in the `Installers/` folder.
-2. Run the following CLI command:
+1. Locate `Optimizely-To-Sitecore-Accelerator-Toolkit-1.0.itempackage` in the `Installers/` directory of this repository.
+- ⏬ **Download:** [Optimizely-To-Sitecore-Accelerator-Toolkit-1.0.itempackage](https://github.com/KalpeshTandel/OptimizelyToSitecore.Accelerator.Toolkit/tree/main/Installers)
+
+2. Run the following CLI command in your Sitecore Serialization code-base:
    ```bash
    dotnet sitecore ser pkg install -f ".\Optimizely-To-Sitecore-Accelerator-Toolkit-1.0.itempackage" -n your-target-environment
    ```
@@ -74,7 +78,7 @@ If your implementation utilizes `appsettings.json` to manage C# settings, add th
   "ContentExport": {
     "ContentRootId": "5",
     "IncludeSubItems": true,
-    "IncludeMediaFiles": false,
+    "IncludeMediaFiles": true,
     "TypesToExport": []
   },
   "MediaExport": {
@@ -91,7 +95,7 @@ If your implementation utilizes `appsettings.json` to manage C# settings, add th
 *   `IncludeMediaFiles`: When `true`, automatically extracts physical media blobs and generates a `map.json` inside the content ZIP.
 *   `TypesToExport`: Optional array of specific Content Type names (e.g., `["ArticlePage"]`). Leave empty to export all types.
 *   `MediaFolderRootId`: The Optimizely assets Folder ID where media export should begin (Leave as `0` for the Global Media Library).
-
+*   `IncludeSubFolders`: When `true`, recursively traverses down the tree to export all descendants of MediaFolderRootId.
 ---
 
 ## 3. Execution: The 3-Phase Migration Workflow
