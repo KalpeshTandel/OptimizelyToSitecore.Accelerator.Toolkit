@@ -16,6 +16,12 @@ graph LR
     style D fill:#eb1f2a,stroke:#eb1f2a,color:#fff
     style B fill:#f9f9f9,stroke:#333,stroke-width:2px,stroke-dasharray: 5 5
 ```
+### 📹 See it in Action: Full Walkthrough
+[![Watch the Migration Walkthrough](https://img.youtube.com/vi/0Q2YelGb3wU/hqdefault.jpg)](https://www.youtube.com/watch?v=0Q2YelGb3wU)
+
+*Click the image above to watch the full step-by-step video walkthrough.*
+
+Direct Link - https://www.youtube.com/watch?v=0Q2YelGb3wU
 
 ## ⚡ Quick Start
 
